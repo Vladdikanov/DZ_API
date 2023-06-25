@@ -13,8 +13,8 @@ POST {{baseUrl}}/sensors/
 Content-Type: application/json
 
 {
-  "name": "ESP36",
-  "description": "Датчик на балконе"
+  "name": "ES456",
+  "description": "Датчик в спальне"
 }
 
 ###
@@ -35,7 +35,7 @@ Content-Type: application/json
 
 {
   "sensor": 1,
-  "temperature": 24.3
+  "temperature": 10.3
 }
 
 ###

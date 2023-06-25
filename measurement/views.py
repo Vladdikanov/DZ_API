@@ -5,7 +5,8 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView,Cre
 
 
 from measurement.models import Sensor,Measurement
-from .serializers import SensorSerializer, MeasurementSerializer
+from .serializers import SensorSerializer, MeasurementSerializer, MeasurementAddSerializer
+
 
 class CreateAndShowAPIView(ListCreateAPIView):
     queryset = Sensor.objects.all()
@@ -17,4 +18,4 @@ class UdateAndShowOne(RetrieveUpdateAPIView):
 
 class CreateMeasurement(CreateAPIView):
     queryset = Measurement.objects.all()
-    serializer_class = MeasurementSerializer
+    serializer_class = MeasurementAddSerializer
