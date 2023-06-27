@@ -8,4 +8,4 @@ class Sensor(models.Model):
 class Measurement(models.Model):
     temperature = models.DecimalField(max_digits=3, decimal_places=1)
     created_at = models.DateTimeField(auto_now=True)
-    sensor = models.ManyToManyField(Sensor,related_name="measurements")
+    sensor = models.ForeignKey(Sensor,on_delete=models.CASCADE,related_name="measurements")
